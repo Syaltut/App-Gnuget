@@ -2,7 +2,7 @@ use ExtUtils::MakeMaker;
 
 WriteMakefile(
     NAME            => 'gnuget',
-    VERSION_FROM    => 'get',
+    VERSION_FROM    => 'gnuget',
     ABSTRACT        => 'A tool to grab GNU softwares',
     AUTHOR          => 'Sandro Cazzaniga <kharec@cpan.org>',
 
