@@ -22,11 +22,6 @@ sub buildFtpCnx {
     $self->{ftp}->cwd('/gnu') and $self->log("cwd() in gnu/");
 }
 
-sub _determineLastVersion {
-    my $self = shift;
-    die("_determineLastVersion(): Not implemented yet");
-}
-
 sub download {
     my $self = shift;
     $self->{ftp}->cwd($self->{software}) 
@@ -42,11 +37,7 @@ sub populate {
     $self->{software} = $name;
     $self->{version} = $version;
     
-    if ($self->{version} ne 0) {
-        $self->{realVersion} = $self->{version};
-    } else { $self->{realVersion} = $self->_determineLastVersion() };
-
-    $self->{archive} = $self->{software}."-".$self->{realVersion}.".tar.gz";
+    $self->{archive} = $self->{software}."-".$self->{version}.".tar.gz";
 }
 
 

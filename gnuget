@@ -12,17 +12,16 @@ gnuget $VERSION !
 Usage:
 
     gnuget make 3.82 # will get version 3.82 of GNU Make
-    gnuget make      # will get last version of GNU Make\n"
-}
+"}
 
 
-if (@ARGV < 1) {
+if (@ARGV < 2) {
     print(usage()); 
     exit(1);
 }
 
 my $software = $ARGV[0];
-my $version = $ARGV[1] || 0;
+my $version = $ARGV[1];
 
 my $gg = new GnuGet;
 $gg->populate($software, $version);
