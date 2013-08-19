@@ -1,0 +1,32 @@
+#!/usr/bin/perl -w
+use strict;
+use GnuGet;
+
+our $VERSION = '0.01';
+
+sub usage {
+    "So this is a simple soft, to get versions of gnu software from their FTP.
+
+gnuget $VERSION ! 
+  
+Usage:
+
+    gnuget make 3.82 # will get version 3.82 of GNU Make
+    gnuget make      # will get last version of GNU Make\n"
+}
+
+
+if (@ARGV < 1) {
+    print(usage()); 
+    exit(1);
+}
+
+my $software = $ARGV[0];
+my $version = $ARGV[1] || 0;
+
+my $gg = new GnuGet;
+$gg->populate($software, $version);
+$gg->buildFtpCnx();
+$gg->download();
+$gg->uncompress();
+$gg->clean();
