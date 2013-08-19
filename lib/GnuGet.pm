@@ -36,7 +36,6 @@ sub populate {
     my ($self, $name, $version) = @_;
     $self->{software} = $name;
     $self->{version} = $version;
-    
     $self->{archive} = $self->{software}."-".$self->{version}.".tar.gz";
 }
 
