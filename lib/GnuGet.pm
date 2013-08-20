@@ -11,7 +11,7 @@ sub new {
 
 sub log {
     my ($self, $msg) = @_;
-    say("[*] $msg");
+    say("[$$] $msg");
 }
 
 sub buildFtpCnx {
