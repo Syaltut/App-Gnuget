@@ -1,8 +1,8 @@
 use ExtUtils::MakeMaker;
 
 WriteMakefile(
-    NAME            => 'gnuget',
-    VERSION_FROM    => 'gnuget',
+    NAME            => 'bin/gnuget',
+    VERSION_FROM    => 'bin/gnuget',
     ABSTRACT        => 'A tool to grab GNU softwares',
     AUTHOR          => 'Sandro Cazzaniga <kharec@cpan.org>',
     INSTALLBIN      => '/usr/bin',
