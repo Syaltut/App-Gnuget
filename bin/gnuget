@@ -29,3 +29,40 @@ $gg->buildFtpCnx();
 $gg->download();
 $gg->uncompress();
 $gg->clean();
+
+__END__
+
+=pod
+
+=head1 NAME
+
+gnuget - grab GNU softwares sources
+
+=head1 VERSION
+
+version 1.0
+
+=head1 SYNOPSIS
+
+    # if you wanna help 
+    $ gnuget
+
+    # to really do stuff
+    $ gnuget make 3.82
+
+=head1 DESCRIPTION
+
+This script is a grabber for GNU softwares sources. It makes easy and fast to download
+sources from the GNU FTP server. 
+
+=head1 AUTHOR
+
+Sandro CAZZANIGA <cazzaniga.sandro@gmail.com>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2013 by Sandro CAZZANIGA.
+
+This is free software; you can redistribute it and/or modify it 
+under the terms of GNU GPL version 3.
+
